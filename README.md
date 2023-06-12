@@ -38,6 +38,8 @@ $ python app.py -port 1234
 
 ## 文件说明
 
+- chatglm-6b-int4目录：在微调过程中会从huggingface上拉取模型到该目录下（文件过大，未上传GitHub）
+
 - app目录
     * dataset目录：langchain基于的知识库，数据集
     * static目录：css、js、imgs等web文件
@@ -55,6 +57,7 @@ $ python app.py -port 1234
 - ptuning目录：
   - utils目录：模型结构、训练、配置文件
   - finetue-ptuning.ipynb：微调文件
+  - output目录：在微调过程中保存的checkpoints（文件过大，未上传GitHub）
 
 ## TODO:
 
