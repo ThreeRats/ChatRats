@@ -27,7 +27,7 @@ if __name__ == '__main__':
     print('开始构建docs ...')
     docs = loader.load_and_split(textsplitter)
 
-    with open('docs.pickle', 'wb') as f:
+    with open('docs.pkl', 'wb') as f:
         pickle.dump(docs, f)
 
     print('构建docs完成!')

@@ -14,9 +14,9 @@ def json_to_txt(json_file):
         answer = json_dict['answer']
         combine_text = ''
         if question[-1] != '？':
-            combine_text = '"context":"问题:' + question + '？回答:" "target": "' + answer + '"'
+            combine_text = question + '？ ' + answer
         else:
-            combine_text = '"context":"问题:' + question + '回答:" "target": "' + answer + '"'
+            combine_text = question + ' ' + answer
         result_list.append(combine_text)
     
     with open('dataset/medi/knowledge_base.txt', 'w', encoding='utf-8') as f:
