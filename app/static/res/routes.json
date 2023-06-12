@@ -1,0 +1,45 @@
+{
+  "statusCode": 200,
+  "message": "数据加载成功",
+  "data": {
+    "menus": [
+      {
+        "id": "1",
+        "label": "上传图片",
+        "icon": "PictureFilled",
+        "path": "/update",
+        "component": "/page-update"
+      },
+      {
+        "id": "2",
+        "label": "查看结果",
+        "icon": "Tickets",
+        "path": "/result",
+        "component": "/page-result"
+      },
+      {
+        "id": "3",
+        "label": "图表",
+        "icon": "PieChart",
+        "path": "/charts",
+        "component": "/page-charts"
+      }
+    ],
+    "pages": [
+      {
+        "id": "0-1",
+        "label": "个人中心",
+        "icon": "",
+        "path": "/user/userInfo",
+        "component": "/page-charts"
+      },
+      {
+        "id": "0-2",
+        "label": "消息中心",
+        "icon": "",
+        "path": "/user/message",
+        "component": "/page-charts"
+      }
+    ]
+  }
+}

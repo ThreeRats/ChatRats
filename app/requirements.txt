@@ -1,0 +1,8 @@
+langchain
+faiss-cpu
+sentence_transformers
+Flask
+tqdm
+torch
+transformers
+regex
