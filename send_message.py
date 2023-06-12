@@ -6,13 +6,24 @@ import pickle
 
 class Message:
     def __init__(self) -> None:
-        self.embeddings = HuggingFaceEmbeddings(model_name='GanymedeNil/text2vec-large-chinese')
+
+        self.embeddings = None
+        if not os.path.exists("embeddings.txt"):
+            print('embeddings文件不存在')
+            self.embeddings = HuggingFaceEmbeddings(model_name='GanymedeNil/text2vec-large-chinese')
+            with open('embeddings.txt', 'wb') as f:
+                pickle.dump(self.embeddings, f)
+        else:
+            print('embeddings文件存在')
+            with open('embeddings.txt', 'rb') as f:
+                self.embeddings = pickle.load(f)
+        
         self.prompt_template =  """已知信息：
     {context} 
 
     根据上述已知信息，简洁和专业的来回答用户的问题。如果无法从中得到答案，请说 “根据已知信息无法回答该问题” 或 “没有提供足够的相关信息”，不允许在答案中添加编造成分，答案请使用中文。 问题是：{question}"""
-        with open('embeddings.txt', 'wb') as f:
-            pickle.dump(self.embeddings, f)
+
+
             
     def get_context(self, query) -> str:
         
