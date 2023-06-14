@@ -78,7 +78,12 @@ def sendChat():
         query_text = prompt.get_context(query_text)
         print('添加后: ', query_text)
 
-    op = chatrat.predict(input_str=query_text, max_length=2048*16,top_p=0.7,temperature=0.95)
+    op = chatrat.predict(
+                    input_str=query_text,
+                    max_length=2048*16,
+                    top_p=0.7,
+                    temperature=0.95
+                )
     
     print('回答: ', op)
     

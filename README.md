@@ -1,5 +1,5 @@
 # ChatRats
-bupt nlp课设 基于chatglm微调搭建的智能聊天机器人
+bupt nlp课设 基于[chatglm](https://github.com/THUDM/ChatGLM-6B)微调搭建的智能聊天机器人
 
 ## 运行方法
 
