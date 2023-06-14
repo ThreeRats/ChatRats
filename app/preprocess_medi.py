@@ -58,18 +58,18 @@ def split_train_val_test(json_file, val_rate=0.1, test_rate=0.1):
     print(f'验证集有{len(val_list)}条数据')
     print(f'测试集有{len(test_list)}条数据')
 
-    with open('dataset/medi/train_set.json', 'w', encoding='utf-8') as train_file:
+    with open('../data/train_set.json', 'w', encoding='utf-8') as train_file:
         json.dump(train_list, train_file, ensure_ascii=False)
     
-    with open('dataset/medi/val_set.json', 'w', encoding='utf-8') as val_file:
+    with open('../data/val_set.json', 'w', encoding='utf-8') as val_file:
         json.dump(val_list, val_file, ensure_ascii=False)
     
-    with open('dataset/medi/test_set.json', 'w', encoding='utf-8') as test_file:
+    with open('../data/test_set.json', 'w', encoding='utf-8') as test_file:
         json.dump(test_list, test_file, ensure_ascii=False)
 
 
 if __name__ == '__main__':
 
-    preprocess('dataset/medi/answer.csv', 'dataset/medi/question.csv', 'dataset/medi/merged.json')
-    split_train_val_test('dataset/medi/merged.json')
+    preprocess('dataset/medi/answer.csv', 'dataset/medi/question.csv', '../data/merged.json')
+    split_train_val_test('../data/merged.json')
     
